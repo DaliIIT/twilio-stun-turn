@@ -8,7 +8,7 @@ var app = express();
 
 
 app.use(cors({
-  allowedOrigins: [process.env.ALLOWED_ORIGIN],
+  allowedOrigins: process.env.ALLOWED_ORIGIN.split(','),
   methods: ['GET']
 }));
 
